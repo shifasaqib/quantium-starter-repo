@@ -1,0 +1,96 @@
+/* === Body & Fonts === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #e2e6ea);
+}
+
+/* === Main Container === */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* === Title === */
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    transition: color 0.3s ease;
+}
+.title:hover {
+    color: #d63384;
+}
+
+/* === Radio Buttons Container === */
+.radio-container {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 16px;
+    display: inline-block;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    margin-bottom: 50px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.radio-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+/* === Radio Label === */
+.radio-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #495057;
+    margin-right: 20px;
+}
+
+/* === Individual Radio Items === */
+.radio-items label {
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.radio-items input[type="radio"] {
+    margin-right: 6px;
+}
+
+/* === Checked Radio Style === */
+.radio-items input[type="radio"]:checked + span {
+    color: #d63384;
+    font-weight: 700;
+}
+
+/* === Graph Container === */
+#sales-line-chart {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+#sales-line-chart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* === Customize Plotly Colors (line chart) === */
+.js-plotly-plot .main-svg {
+    background-color: transparent !important;
+}
+
+/* Smooth hover for line chart traces */
+.js-plotly-plot .scatterlayer path {
+    stroke-width: 3px !important;
+    transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+.js-plotly-plot .scatterlayer path:hover {
+    stroke: #d63384 !important;
+    stroke-width: 5px !important;
+}
